@@ -35,6 +35,7 @@ class House :
          self.number_of_floors = int(number_of_floors)
 #
       def go_to(self, new_floor) :
+         new_floor = int(new_floor)
          if 1 <= new_floor <= self.number_of_floors :
               for i in range(1, new_floor+1) :
                   print(i)

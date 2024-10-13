@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="144835c8-add5-44f8-a274-34967f64ce6d" name="Changes" comment="module_5_1.py 10.10.2024 20:12">
-      <change afterPath="$PROJECT_DIR$/TEST.py" afterDir="false" />
+    <list default="true" id="144835c8-add5-44f8-a274-34967f64ce6d" name="Changes" comment="module_5_1.py 11.10.2024 11:30">
+      <change afterPath="$PROJECT_DIR$/module_5_2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/module_5_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/module_5_1.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -52,19 +51,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.main.executor": "Run",
-    "Python.module_5_1.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.module_5_1.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/@tmp/urban-university/для отправки/module_5&quot;
   },
-  "keyToStringList": {
-    "ChangesTree.GroupingKeys": [
-      "directory"
+  &quot;keyToStringList&quot;: {
+    &quot;ChangesTree.GroupingKeys&quot;: [
+      &quot;directory&quot;
     ]
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\@tmp\urban-university\для отправки\module_5" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="pythonProject_M5" />
@@ -145,7 +150,15 @@
       <option name="project" value="LOCAL" />
       <updated>1728580370753</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="module_5_1.py 11.10.2024 11:30">
+      <option name="closed" value="true" />
+      <created>1728635367920</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1728635367920</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -162,6 +175,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="module_5_1.py 10.10.2024 19:59" />
     <MESSAGE value="module_5_1.py 10.10.2024 20:12" />
-    <option name="LAST_COMMIT_MESSAGE" value="module_5_1.py 10.10.2024 20:12" />
+    <MESSAGE value="module_5_1.py 11.10.2024 11:30" />
+    <option name="LAST_COMMIT_MESSAGE" value="module_5_1.py 11.10.2024 11:30" />
   </component>
 </project>
