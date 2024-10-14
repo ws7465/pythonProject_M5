@@ -25,9 +25,22 @@ class House :
                   print(i)
          else :
               print("Такого этажа не существует")
-
+#
+      def __len__(self) :
+          return self.number_of_floors
+#
+      def __str__(self) :
+          return 'Название: '+self.name+', кол-во этажей: '+str(self.number_of_floors) #
 # # #
 #
+h1 = House('ЖК Эльбрус', 10)
+h2 = House('ЖК Акация', 20)
+print(str(h1))
+print(str(h2))
+print(len(h1))
+print(len(h2))
+#
+##
 # Пример результата выполнения программы:
 # Пример выполняемого кода:
 # h1 = House('ЖК Эльбрус', 10)
