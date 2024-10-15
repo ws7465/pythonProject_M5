@@ -68,7 +68,7 @@ class House :
 #
       def __radd__(self, other) : # отражённое сложение x + y
           return self.__add__(other)
-
+#
       def __iadd__(self, other):  # сложение с присваиванием x += y
           self.number_of_floors = self.__add__(other)
           return self.number_of_floors
