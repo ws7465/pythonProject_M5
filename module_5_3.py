@@ -48,94 +48,84 @@ class House :
       def __str__(self) : # характеристика строения
          return f'Название: {self.name}, кол-во этажей: {self.number_of_floors}'  #
 #
-      def __eq__(self, other):
+      def __eq__(self, other) : #  True,если __eq__(==).
           if isinstance(other, House):
               akh1 = int(self.number_of_floors)
               akh2 = int(other.number_of_floors)
               return akh1 == akh2
           elif not isinstance(other, House):
-              #print('+++++++++++++++++++++++++++++++++++')
-              #print(isinstance(other, House))
-              #print('+++++++++++++++++++++++++++++++++++')
               akh1 = int(self.number_of_floors)
               akh2 = int(other)
-              #print(self.number_of_floors)
-              #print(other)
               return akh1 == akh2
 #
-      def __add__(self, other):
-          #self.number_of_floors += value  #
-          if isinstance(other, House):
-              #print('ak_add_if')
-              akh = self.number_of_floors + other.number_of_floors
-              print(f'Название: {self.name}, кол-во этажей: {akh}')  #
-              return akh
-          else :
-              #print('ak_add_else')
-              akh = self.number_of_floors + other
-              print(f'Название: {self.name}, кол-во этажей: {akh}')  #
-              return akh
+      def __add__(self, other) : # добавить (x + y)
+           if isinstance(other, House):
+              self.number_of_floors += other.number_of_floors
+              return House(self.name, self.number_of_floors)
+           else :
+              self.number_of_floors += other
+              return House(self.name, self.number_of_floors)
 #
-#
-      def __radd__(self, other):
+      def __radd__(self, other) : # отражённое сложение x + y
           return self.__add__(other)
-      ##
-##########
-#       def __add__(self, other):
-#           if isinstance(other, CustomNumber):
-#               return CustomNumber(self.value + other.value)
+
+      def __iadd__(self, other):  # сложение с присваиванием x += y
+          self.number_of_floors = self.__add__(other)
+          return self.number_of_floors
 #
-#       else:
-#       return CustomNumber(self.value + other)
+      def __lt__(self, other) : # True,если __lt__(<).
+          if isinstance(other, House):
+              akh1 = int(self.number_of_floors)
+              akh2 = int(other.number_of_floors)
+              return akh1 < akh2
+          elif not isinstance(other, House):
+              akh1 = int(self.number_of_floors)
+              akh2 = int(other)
+              return akh1 < akh2
 #
-#       def __radd__(self, other):
-#           return self.__add__(other)
-# ##########
+      def __le__(self, other) : # True, если , __le__(<=)
+          if isinstance(other, House):
+              akh1 = int(self.number_of_floors)
+              akh2 = int(other.number_of_floors)
+              return akh1 <= akh2
+          elif not isinstance(other, House):
+              akh1 = int(self.number_of_floors)
+              akh2 = int(other)
+              return akh1 <= akh2
 #
-      def __lt__(self, other) : # True, если кол-во этажей одинаково у self и у other.
-          if (isinstance(self.number_of_floors, int) and isinstance(self, House)) and (isinstance(other.number_of_floors, int) and isinstance(other, House)) :  #
-              return self.number_of_floors < other.number_of_floors #
-          else : #
-              return 'ошибка в исходных данных'
+      def __gt__(self, other) : # True, если , __gt__(>)
+          if isinstance(other, House):
+              akh1 = int(self.number_of_floors)
+              akh2 = int(other.number_of_floors)
+              return akh1 > akh2
+          elif not isinstance(other, House):
+              akh1 = int(self.number_of_floors)
+              akh2 = int(other)
+              return akh1 > akh2
+
 #
-      def __le__(self, other) : # True, если кол-во этажей одинаково у self и у other.
-          if (isinstance(self.number_of_floors, int) and isinstance(self, House)) and (isinstance(other.number_of_floors, int) and isinstance(other, House)) :  #
-              return self.number_of_floors <= other.number_of_floors #
-          else : #
-              return 'ошибка в исходных данных'
+      def __ge__(self, other) : # True, если , __ge__(>=)
+          if isinstance(other, House):
+              akh1 = int(self.number_of_floors)
+              akh2 = int(other.number_of_floors)
+              return akh1 >= akh2
+          elif not isinstance(other, House):
+              akh1 = int(self.number_of_floors)
+              akh2 = int(other)
+              return akh1 >= akh2
 #
-      def __gt__(self, other) : # True, если кол-во этажей одинаково у self и у other.
-          if (isinstance(self.number_of_floors, int) and isinstance(self, House)) and (isinstance(other.number_of_floors, int) and isinstance(other, House)) :  #
-              return self.number_of_floors > other.number_of_floors #
-          else : #
-              return 'ошибка в исходных данных'
+      def __ne__(self, other) : # True, если , __ne__(!=)
+          if isinstance(other, House):
+              akh1 = int(self.number_of_floors)
+              akh2 = int(other.number_of_floors)
+              return akh1 != akh2
+          elif not isinstance(other, House):
+              akh1 = int(self.number_of_floors)
+              akh2 = int(other)
+              return akh1 != akh2
 #
-      def __ge__(self, other) : # True, если кол-во этажей одинаково у self и у other.
-          if (isinstance(self.number_of_floors, int) and isinstance(self, House)) and (isinstance(other.number_of_floors, int) and isinstance(other, House)) :  #
-              return self.number_of_floors >= other.number_of_floors #
-          else : #
-              return 'ошибка в исходных данных'
-#
-      def __ne__(self, other) : # True, если кол-во этажей одинаково у self и у other.
-          if (isinstance(self.number_of_floors, int) and isinstance(self, House)) and (isinstance(other.number_of_floors, int) and isinstance(other, House)) :  #
-              return self.number_of_floors != other.number_of_floors #
-          else : #
-              return 'ошибка в исходных данных'
-#
-      # def __add__(self, value) : # добавить этажи
-      #     self.number_of_floors += int(value) #
-      #     return f'Название: {self.name}, кол-во этажей: {self.number_of_floors}'  #
-# #
-#       def __radd__(self, value) : # добавить этажи
-#           #self.number_of_floors += int(value) #
-#           #return self
-#           return self + value
-# #
-#       def __iadd__(self, value) : # добавить этажи
-#           #self.number_of_floors += int(value) #
-#           #return self
-#           return self + value
 # # #
+# Пример результата выполнения программы:
 h1 = House('ЖК Эльбрус', 10)
 h2 = House('ЖК Акация', 20)
 #
@@ -148,51 +138,19 @@ h1 = h1 + 10 # __add__
 print(h1)
 print(h1 == h2) # __eq__
 #
-#h1 += 10 # __iadd__
-#print(h1)
+h1 += 10 # __iadd__
+print(h1)
 #
-#h2 = 10 + h2 # __radd__
-#print(h2)
+h2 = 10 + h2 # __radd__
+print(h2)
 #
-#print(h1 > h2) # __gt__
-#print(h1 >= h2) # __ge__
-#print(h1 < h2) # __lt__
-#print(h1 <= h2) # __le__
-#print(h1 != h2) # __ne__
+print(h1 > h2) # __gt__
+print(h1 >= h2) # __ge__
+print(h1 < h2) # __lt__
+print(h1 <= h2) # __le__
+print(h1 != h2) # __ne__
 #
 # # #
-# h1 = House('ЖК Эльбрус', 10)
-# h2 = House('ЖК Акация', 20)
-# print(str(h1))
-# print(str(h2))
-# print(len(h1))
-# print(len(h2))
-###
-# Пример результата выполнения программы:
-# Пример выполняемого кода:
-# h1 = House('ЖК Эльбрус', 10)
-# h2 = House('ЖК Акация', 20)
-#
-# print(h1)
-# print(h2)
-#
-# print(h1 == h2) # __eq__
-#
-# h1 = h1 + 10 # __add__
-# print(h1)
-# print(h1 == h2)
-#
-# h1 += 10 # __iadd__
-# print(h1)
-#
-# h2 = 10 + h2 # __radd__
-# print(h2)
-#
-# print(h1 > h2) # __gt__
-# print(h1 >= h2) # __ge__
-# print(h1 < h2) # __lt__
-# print(h1 <= h2) # __le__
-# print(h1 != h2) # __ne__
 #
 # Вывод на консоль:
 # Название: ЖК Эльбрус, кол-во этажей: 10
@@ -208,9 +166,7 @@ print(h1 == h2) # __eq__
 # True
 # False
 #
-# Примечания:
 #
-#     Методы __iadd__ и __radd__ не обязательно описывать заново,
-#     достаточно вернуть значение вызова __add__.
 #
 # Конец задания
+#
