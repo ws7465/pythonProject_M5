@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="144835c8-add5-44f8-a274-34967f64ce6d" name="Changes" comment="module_5_1.py 14.10.2024 16:27">
+    <list default="true" id="144835c8-add5-44f8-a274-34967f64ce6d" name="Changes" comment="module_5_1.py 14.10.2024 19:50">
+      <change afterPath="$PROJECT_DIR$/test1.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEST.py" beforeDir="false" afterPath="$PROJECT_DIR$/TEST.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/module_5_3.py" beforeDir="false" afterPath="$PROJECT_DIR$/module_5_3.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -52,9 +54,12 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python.TEST.executor": "Run",
     "Python.main.executor": "Run",
     "Python.module_5_1.executor": "Run",
     "Python.module_5_2.executor": "Run",
+    "Python.module_5_3.executor": "Run",
+    "Python.test1.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "last_opened_file_path": "E:/@tmp/urban-university/для отправки/module_5"
@@ -182,7 +187,15 @@
       <option name="project" value="LOCAL" />
       <updated>1728908193096</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="module_5_1.py 14.10.2024 19:50">
+      <option name="closed" value="true" />
+      <created>1728924652198</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1728924652198</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -203,6 +216,7 @@
     <MESSAGE value="module_5_1.py 13.10.2024 22:02" />
     <MESSAGE value="module_5_1.py 14.10.2024 14:27" />
     <MESSAGE value="module_5_1.py 14.10.2024 16:27" />
-    <option name="LAST_COMMIT_MESSAGE" value="module_5_1.py 14.10.2024 16:27" />
+    <MESSAGE value="module_5_1.py 14.10.2024 19:50" />
+    <option name="LAST_COMMIT_MESSAGE" value="module_5_1.py 14.10.2024 19:50" />
   </component>
 </project>
