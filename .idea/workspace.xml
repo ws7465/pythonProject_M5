@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="144835c8-add5-44f8-a274-34967f64ce6d" name="Changes" comment="module_5_1.py 15.10.2024 13:35">
+    <list default="true" id="144835c8-add5-44f8-a274-34967f64ce6d" name="Changes" comment="module_5_1.py 15.10.2024 14:57">
+      <change afterPath="$PROJECT_DIR$/module_5_4.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module_5_3.py" beforeDir="false" afterPath="$PROJECT_DIR$/module_5_3.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -201,7 +201,23 @@
       <option name="project" value="LOCAL" />
       <updated>1728988506131</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="module_5_1.py 15.10.2024 14:52">
+      <option name="closed" value="true" />
+      <created>1728993169038</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1728993169038</updated>
+    </task>
+    <task id="LOCAL-00013" summary="module_5_1.py 15.10.2024 14:57">
+      <option name="closed" value="true" />
+      <created>1728993386075</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1728993386075</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -224,6 +240,8 @@
     <MESSAGE value="module_5_1.py 14.10.2024 16:27" />
     <MESSAGE value="module_5_1.py 14.10.2024 19:50" />
     <MESSAGE value="module_5_1.py 15.10.2024 13:35" />
-    <option name="LAST_COMMIT_MESSAGE" value="module_5_1.py 15.10.2024 13:35" />
+    <MESSAGE value="module_5_1.py 15.10.2024 14:52" />
+    <MESSAGE value="module_5_1.py 15.10.2024 14:57" />
+    <option name="LAST_COMMIT_MESSAGE" value="module_5_1.py 15.10.2024 14:57" />
   </component>
 </project>
