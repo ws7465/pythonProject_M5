@@ -28,8 +28,14 @@
 class House : #
     houses_history = [] # add 5_4
 #
-
-
+    def __new__(cls, *args, **kwargs) : # add 5_4
+        cls.houses_history.append(args[0]) # add 5_4
+        return object.__new__(cls) # add 5_4
+#
+    def __del__(self) : # add 5_4
+        print(f'{self.name}, снесён, но он останется в истории') # add 5_4
+        del self # add 5_4
+#
     def __init__(self, name, number_of_floors) :
         self.name = name # наименование строения
         self.number_of_floors = int(number_of_floors) # кол-во его этажей
@@ -129,18 +135,18 @@ class House : #
 # Пример результата выполнения программы:
 #
 # Пример выполнения программы:
-# h1 = House('ЖК Эльбрус', 10)
-# print(House.houses_history)
-# h2 = House('ЖК Акация', 20)
-# print(House.houses_history)
-# h3 = House('ЖК Матрёшки', 20)
-# print(House.houses_history)
+h1 = House('ЖК Эльбрус', 10)
+print(House.houses_history)
+h2 = House('ЖК Акация', 20)
+print(House.houses_history)
+h3 = House('ЖК Матрёшки', 20)
+print(House.houses_history)
 #
 # # Удаление объектов
-# del h2
-# del h3
+del h2
+del h3
 #
-# print(House.houses_history)
+print(House.houses_history)
 #
 # Вывод на консоль:
 # ['ЖК Эльбрус']
