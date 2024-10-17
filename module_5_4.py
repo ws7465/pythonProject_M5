@@ -34,7 +34,7 @@ class House : #
 #
     def __del__(self) : # add 5_4
         print(f'{self.name}, снесён, но он останется в истории') # add 5_4
-        del self # add 5_4
+        # del self # add 5_4 ОШИБКА, это - лишнее
 #
     def __init__(self, name, number_of_floors) :
         self.name = name # наименование строения
