@@ -62,6 +62,22 @@
 #           После воспроизведения нужно выводить: "Конец видео"
 #
 #####
+class User :
+    def __init__(self, nickname, password, age,) :
+        self.nickname = nickname # (имя пользователя, строка)
+        self.password = hash(password) # (в хэшированном виде, число)
+        # (в хэшированном виде, число)
+        self.age = age # (возраст, число)
+#
+    def __hash__(self) :
+        return hash(self.password)
+
+user1 = User('Пользователь_1', 'xaxaxa', 25)
+print(user1.age)
+print(user1.nickname)
+print(user1.password)
+
+
 
 #####
 #
