@@ -80,30 +80,62 @@ class Video :
                                      # (False по умолчанию))
 ##
 class UrTube :
-    def __init__(self, users = '', videos = [], current_user = ''):
+    #users = [] # (список объектов User)
+    videos = [] # (список объектов Video)
+#
+    #def __new__(cls, *args, **kwargs):  #
+    #    cls.videos.append(args)  #
+    #    cls.users = [222]  #
+    #    print(cls.users)
+    #    return #object.__new__(cls)  #
+#
+    def __init__(self, users=(), videos=(), current_user=()):
         self.users = users # (список объектов User)
         self.videos = videos # (список объектов Video)
         self.current_user = current_user # (текущий пользователь, User)
 #
-    def log_in(self, nickname, password) : # пытается найти пользователя в users с такими же
-#           логином и паролем. Если такой пользователь существует, то current_user
-#           меняется на найденного.
-
+    def log_in(self, nickname, password) : # пытается найти пользователя в users
+        # с такими же логином и паролем. Если такой пользователь существует,
+        # то current_user меняется на найденного.
         pass
 #
-    def register(self, nickname, password, age) :
+    def register(self, nickname, password, age) : # добавляет пользователя в список,
+        # (если пользователя с таким же nickname не существует ).
+        # Если существует, выводит на экран: "Пользователь {nickname} уже существует".
+        # После регистрации, вход выполняется автоматически.
         pass
 #
-    def log_out(self) :
+    def log_out(self) : #  для сброса текущего пользователя на None.
         pass
 #
-    def __add__ (self) :
+    def add(self, *args) : # принимает неограниченное кол-во объектов класса Video и
+#       # все добавляет в videos, если с таким же названием видео ещё не существует.
+#       # В противном случае ничего не происходит.
+        videos = UrTube.videos
+        for i in args : #
+            print (i.title)
+            if i.title not in UrTube.videos :
+                videos.append(i.title)
+                #UrTube.videos = videos
+                print(videos)
+        UrTube.videos = videos
+        return videos
+#
+    def get_videos(self) : # принимает поисковое слово и возвращает список названий
+#           всех видео, содержащих поисковое слово.
+#           Следует учесть, что слово 'UrbaN' присутствует в строке 'Urban the best'
+#           (не учитывать регистр).
         pass
 #
-    def get_videos(self) :
-        pass
-#
-    def watch_video(self) :
+    def watch_video(self) : # Для паузы между выводами секунд воспроизведения можно
+            # использовать функцию sleep из модуля time.
+#           Воспроизводить видео можно только тогда, когда пользователь вошёл в UrTube.
+#           В противном случае выводить в консоль надпись:
+#           "Войдите в аккаунт, чтобы смотреть видео"
+#           Если видео найдено, следует учесть, что пользователю может быть отказано в
+#           просмотре, т.к. есть ограничения 18+. Должно выводиться сообщение:
+#           "Вам нет 18 лет, пожалуйста покиньте страницу"
+#           После воспроизведения нужно выводить: "Конец видео"
         pass
 #
 ##
@@ -111,20 +143,23 @@ class UrTube :
 #
 #
 ur = UrTube()
-print(ur.users)
+#print(ur.users)
+#print(ur.videos)
+#print(ur.current_user)
+#user1 = User('Пользователь_1', 'xaxaxa', 25)
+#print(user1.age)
+#print(user1.nickname)
+#print(user1.password)
+v2 = Video('Для чего девушкам парень программист?', 10, adult_mode=True)
+print(v2.title)
+#print(v2.duration)
+#print(v2.time_now)
+#print(v2.adult_mode)
+v1 = Video('Лучший язык программирования 2024 года', 200)
+print(f'{v1.title}, {v1.duration}, {v1.adult_mode}')
+ur.add(v1, v2)
 print(ur.videos)
-print(ur.current_user)
-user1 = User('Пользователь_1', 'xaxaxa', 25)
-print(user1.age)
-print(user1.nickname)
-print(user1.password)
-v1 = Video('Для чего девушкам парень программист?', 10, adult_mode=True)
-print(v1.title)
-print(v1.duration)
-print(v1.time_now)
-print(v1.adult_mode)
-
-
+#
 #####
 #
 # Код для проверки:
