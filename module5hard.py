@@ -63,20 +63,49 @@
 #
 #####
 class User :
-    def __init__(self, nickname, password, age,) :
+    def __init__(self, nickname, password, age) :
         self.nickname = nickname # (имя пользователя, строка)
         self.password = hash(password) # (в хэшированном виде, число)
         # (в хэшированном виде, число)
         self.age = age # (возраст, число)
 #
-    def __hash__(self) :
+    def __hash__(self) : # получение ХЭШ-а пароля
         return hash(self.password)
+##
+class Video :
+    def __init__(self, title, duration, time_now = 0, adult_mode = False) :
+        self.title = title # (заголовок, строка)
+        self.duration = duration # (продолжительность, секунды)
+        self.time_now = time_now # (секунда остановки (изначально 0))
+        self.adult_mode = adult_mode # (ограничение по возрасту, bool
+                                     # (False по умолчанию))
+#
+    def get_videos(self) :
+        pass
+##
+class UrTube :
+    def __init__(self, users = '', videos = [], current_user = ''):
+        self.users = users # (список объектов User)
+        self.videos = videos # (список объектов Video)
+        self.current_user = current_user # (текущий пользователь, User)
 
+    ##
+
+#
+#
+ur = UrTube()
+print(ur.users)
+print(ur.videos)
+print(ur.current_user)
 user1 = User('Пользователь_1', 'xaxaxa', 25)
 print(user1.age)
 print(user1.nickname)
 print(user1.password)
-
+v1 = Video('Для чего девушкам парень программист?', 10, adult_mode=True)
+print(v1.title)
+print(v1.duration)
+print(v1.time_now)
+print(v1.adult_mode)
 
 
 #####
