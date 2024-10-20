@@ -66,7 +66,6 @@ class User :
     def __init__(self, nickname, password, age) :
         self.nickname = nickname # (имя пользователя, строка)
         self.password = hash(password) # (в хэшированном виде, число)
-        # (в хэшированном виде, число)
         self.age = age # (возраст, число)
 #
     def __hash__(self) : # получение ХЭШ-а пароля
@@ -79,17 +78,35 @@ class Video :
         self.time_now = time_now # (секунда остановки (изначально 0))
         self.adult_mode = adult_mode # (ограничение по возрасту, bool
                                      # (False по умолчанию))
-#
-    def get_videos(self) :
-        pass
 ##
 class UrTube :
     def __init__(self, users = '', videos = [], current_user = ''):
         self.users = users # (список объектов User)
         self.videos = videos # (список объектов Video)
         self.current_user = current_user # (текущий пользователь, User)
+#
+    def log_in(self, nickname, password) : # пытается найти пользователя в users с такими же
+#           логином и паролем. Если такой пользователь существует, то current_user
+#           меняется на найденного.
 
-    ##
+        pass
+#
+    def register(self, nickname, password, age) :
+        pass
+#
+    def log_out(self) :
+        pass
+#
+    def __add__ (self) :
+        pass
+#
+    def get_videos(self) :
+        pass
+#
+    def watch_video(self) :
+        pass
+#
+##
 
 #
 #
