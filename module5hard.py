@@ -62,6 +62,8 @@
 #           После воспроизведения нужно выводить: "Конец видео"
 #
 #####
+import time
+#
 class User :
     def __init__(self, nickname, password, age) :
         self.nickname = nickname # (имя пользователя, строка)
@@ -83,11 +85,6 @@ class UrTube :
     #users = [] # (список объектов User)
     videos = [] # (список объектов Video)
 #
-    #def __new__(cls, *args, **kwargs):  #
-    #    cls.videos.append(args)  #
-    #    cls.users = [222]  #
-    #    print(cls.users)
-    #    return #object.__new__(cls)  #
 #
     def __init__(self, users=(), videos=(), current_user=()):
         self.users = users # (список объектов User)
@@ -116,18 +113,27 @@ class UrTube :
             print (i.title)
             if i.title not in UrTube.videos :
                 videos.append(i.title)
-                #UrTube.videos = videos
-                print(videos)
+                #print(videos)
+        self.videos = videos
         UrTube.videos = videos
         return videos
 #
-    def get_videos(self) : # принимает поисковое слово и возвращает список названий
-#           всех видео, содержащих поисковое слово.
-#           Следует учесть, что слово 'UrbaN' присутствует в строке 'Urban the best'
-#           (не учитывать регистр).
-        pass
+    def get_videos(self, pstr) : # принимает поисковое слово и возвращает список названий
+#           # всех видео, содержащих поисковое слово.
+#           # Следует учесть, что слово 'UrbaN' присутствует в строке 'Urban the best'
+#           # (не учитывать регистр).
+        videos = UrTube.videos
+        lower_pstr = pstr.lower()
+        rstr = ''
+        for i in videos :
+            low_i = i.lower()
+            if lower_pstr in low_i :
+                #print(f'{i}  ', end = '  ')
+                rstr += '  '+i
+        return rstr
+        #pass
 #
-    def watch_video(self) : # Для паузы между выводами секунд воспроизведения можно
+    def watch_video(self, title) : # Для паузы между выводами секунд воспроизведения можно
             # использовать функцию sleep из модуля time.
 #           Воспроизводить видео можно только тогда, когда пользователь вошёл в UrTube.
 #           В противном случае выводить в консоль надпись:
@@ -136,7 +142,16 @@ class UrTube :
 #           просмотре, т.к. есть ограничения 18+. Должно выводиться сообщение:
 #           "Вам нет 18 лет, пожалуйста покиньте страницу"
 #           После воспроизведения нужно выводить: "Конец видео"
-        pass
+
+        video = Video()
+        time_dur = video.duration
+        for i in time_dur : #
+            print(i, end = ' ')
+            time.sleep(1)
+        #print("Войдите в аккаунт, чтобы смотреть видео")
+        #print("Вам нет 18 лет, пожалуйста покиньте страницу")
+        return 'конец видео'
+        #pass
 #
 ##
 
@@ -146,19 +161,25 @@ ur = UrTube()
 #print(ur.users)
 #print(ur.videos)
 #print(ur.current_user)
-#user1 = User('Пользователь_1', 'xaxaxa', 25)
+user1 = User('Пользователь_1', 'xaxaxa', 25)
 #print(user1.age)
 #print(user1.nickname)
 #print(user1.password)
 v2 = Video('Для чего девушкам парень программист?', 10, adult_mode=True)
-print(v2.title)
+#print(v2.title)
 #print(v2.duration)
 #print(v2.time_now)
 #print(v2.adult_mode)
 v1 = Video('Лучший язык программирования 2024 года', 200)
-print(f'{v1.title}, {v1.duration}, {v1.adult_mode}')
+#print(f'{v1.title}, {v1.duration}, {v1.adult_mode}')
 ur.add(v1, v2)
-print(ur.videos)
+#print(ur.videos)
+print('лучший')
+print(ur.get_videos('лучший'))
+print('ПРОГ')
+print(ur.get_videos('ПРОГ'))
+#ur.watch_video('Для чего девушкам парень программист?')
+
 #
 #####
 #
