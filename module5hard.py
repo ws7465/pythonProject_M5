@@ -81,29 +81,52 @@ class Video :
         self.adult_mode = adult_mode # (ограничение по возрасту, bool
                                      # (False по умолчанию))
 ##
-class UrTube :
-    #users = [] # (список объектов User)
-    videos = [] # (список объектов Video)
 #
+class UrTube : #
+    users = [] # (список объектов User)
+    videos = []  # (список объектов Video)
+    current_user =  [] #current_user(текущий пользователь, User)
 #
-    def __init__(self, users=(), videos=(), current_user=()):
-        self.users = users # (список объектов User)
-        self.videos = videos # (список объектов Video)
-        self.current_user = current_user # (текущий пользователь, User)
 #
     def log_in(self, nickname, password) : # пытается найти пользователя в users
         # с такими же логином и паролем. Если такой пользователь существует,
         # то current_user меняется на найденного.
-        pass
+        if nickname in UrTube.users : #
+            self.password = hash(password)
+            UrTube.current_user = self.hpassword
+            return True
+        else : #
+            return False
 #
     def register(self, nickname, password, age) : # добавляет пользователя в список,
         # (если пользователя с таким же nickname не существует ).
         # Если существует, выводит на экран: "Пользователь {nickname} уже существует".
         # После регистрации, вход выполняется автоматически.
-        pass
+        #user = User() #
+        self.nickname = nickname # (имя пользователя, строка)
+        #print(self.nickname)
+        self.password = password # (в хэшированном виде, число)
+        #print(self.password)
+        self.age = age # (возраст, число)
+        #print(self.age)
+        if self.nickname in UrTube.users : #
+            print("Пользователь {nickname} уже существует")
+            self.password = hash(password)
+            UrTube.current_user = [self.nickname, self.password, self.age]
+            print(self.current_user)
+            return False
+        else : #
+            user = User(nickname, password, age) #
+            UrTube.users.append(nickname)  #
+            self.password = hash(password)
+            UrTube.current_user =  [self.nickname, self.password, self.age]  #
+            #UrTube.current_user[nickname] =  password  #
+            return True
+        #input('  --')
 #
     def log_out(self) : #  для сброса текущего пользователя на None.
-        pass
+        self.current_user = None
+        return True
 #
     def add(self, *args) : # принимает неограниченное кол-во объектов класса Video и
 #       # все добавляет в videos, если с таким же названием видео ещё не существует.
@@ -142,9 +165,13 @@ class UrTube :
 #           просмотре, т.к. есть ограничения 18+. Должно выводиться сообщение:
 #           "Вам нет 18 лет, пожалуйста покиньте страницу"
 #           После воспроизведения нужно выводить: "Конец видео"
+        if True :
+            print(UrTube.current_user)
+        #if UrTube().current_user in UrTube().users and Video(self,title) in UrTube().videos : #
 
-        video = Video()
-        time_dur = video.duration
+        return True
+        #video = Video(title)
+        time_dur = Video().duration
         for i in time_dur : #
             print(i, end = ' ')
             time.sleep(1)
@@ -173,11 +200,12 @@ v2 = Video('Для чего девушкам парень программист
 v1 = Video('Лучший язык программирования 2024 года', 200)
 #print(f'{v1.title}, {v1.duration}, {v1.adult_mode}')
 ur.add(v1, v2)
-#print(ur.videos)
+print(ur.videos)
 print('лучший')
 print(ur.get_videos('лучший'))
 print('ПРОГ')
 print(ur.get_videos('ПРОГ'))
+ur.register('urban_pythonist', 'iScX4vIJClb9YQavjAgF', 25)
 #ur.watch_video('Для чего девушкам парень программист?')
 
 #
