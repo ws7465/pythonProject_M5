@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="144835c8-add5-44f8-a274-34967f64ce6d" name="Changes" comment="module_5_hard.py 20.10.2024 23:55">
+    <list default="true" id="144835c8-add5-44f8-a274-34967f64ce6d" name="Changes" comment="module_5_hard.py 22.10.2024 18:29">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/module5hard.py" beforeDir="false" afterPath="$PROJECT_DIR$/module5hard.py" afterDir="false" />
     </list>
@@ -299,7 +299,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729457691937</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="module_5_hard.py 22.10.2024 18:29">
+      <option name="closed" value="true" />
+      <created>1729610962731</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1729610962731</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -334,6 +342,7 @@
     <MESSAGE value="module_5_hard.py 20.10.2024 13:03" />
     <MESSAGE value="module_5_hard.py 20.10.2024 20:35" />
     <MESSAGE value="module_5_hard.py 20.10.2024 23:55" />
-    <option name="LAST_COMMIT_MESSAGE" value="module_5_hard.py 20.10.2024 23:55" />
+    <MESSAGE value="module_5_hard.py 22.10.2024 18:29" />
+    <option name="LAST_COMMIT_MESSAGE" value="module_5_hard.py 22.10.2024 18:29" />
   </component>
 </project>
